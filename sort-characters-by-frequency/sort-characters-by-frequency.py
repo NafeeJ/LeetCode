@@ -14,6 +14,6 @@ class Solution:
         
         for key in sort_hist[::-1]:
             for i in range(hist[key]):
-                res = f'{res}{key}'
+                res = '%s%s' % (res, key)
                 
         return res
