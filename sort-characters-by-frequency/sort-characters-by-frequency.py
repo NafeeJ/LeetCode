@@ -8,12 +8,12 @@ class Solution:
             except:
                 hist[char] = 1
                 
-        sort_hist = reversed(sorted(hist, key=hist.get))
+        sort_hist = sorted(hist, key=hist.get)
         
         res = ''
         
-        for key in sort_hist:
+        for key in sort_hist[::-1]:
             for i in range(hist[key]):
-                res = f'{res}{key}'
+                res = '%s%s' % (res, key)
                 
         return res
